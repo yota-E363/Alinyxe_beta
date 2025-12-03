@@ -6,7 +6,7 @@ const Spline = lazy(() => import('@splinetool/react-spline'));
 
 const HeroSpline = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen pt-20 md:pt-0 flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div 
         className="absolute inset-0 z-0"

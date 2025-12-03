@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Mail, Phone, MapPin, Linkedin, Twitter, Github } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from 'lucide-react';
 import logo from '@/assets/logo.png';
 
 const Footer = () => {
@@ -17,14 +17,20 @@ const Footer = () => {
               Experts en solutions d'intelligence artificielle avancées pour transformer votre entreprise.
             </p>
             <div className="flex gap-3">
-              <a href="#" className="btn btn-circle btn-sm btn-ghost hover:bg-primary hover:text-background">
+              <a href="https://www.facebook.com/share/1JhYhMh3FB/" className="btn btn-circle btn-sm btn-ghost hover:bg-primary hover:text-background">
+                <Facebook size={20} />
+              </a>
+              <a href="https://www.linkedin.com/in/alinyxe-ia-558291367?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" className="btn btn-circle btn-sm btn-ghost hover:bg-primary hover:text-background">
                 <Linkedin size={20} />
               </a>
-              <a href="#" className="btn btn-circle btn-sm btn-ghost hover:bg-primary hover:text-background">
+              <a href="https://x.com/Alinyxe?t=ZQJhKvNA9r_2NU3dvRb0TQ&s=09" className="btn btn-circle btn-sm btn-ghost hover:bg-primary hover:text-background">
                 <Twitter size={20} />
               </a>
               <a href="#" className="btn btn-circle btn-sm btn-ghost hover:bg-primary hover:text-background">
                 <Github size={20} />
+              </a>
+              <a href="https://www.instagram.com/alinyxe.ia?igsh=dWg5M3luMzdjMGsx" className="btn btn-circle btn-sm btn-ghost hover:bg-primary hover:text-background">
+                <Instagram size={20} />
               </a>
             </div>
           </div>
@@ -54,18 +60,18 @@ const Footer = () => {
           {/* Contact */}
           <div>
             <h4 className="font-bold text-lg mb-4 text-primary">Contact</h4>
-            <ul className="space-y-3">
-              <li className="flex items-start gap-2 text-muted-foreground">
+            <ul className="space-y-3">  
+            <li className="flex items-start gap-2 text-muted-foreground">
                 <Mail className="w-5 h-5 text-primary mt-0.5" />
-                <span>contact@alinyxe.com</span>
+                  <span>Alinyxe@mail.com</span>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <Phone className="w-5 h-5 text-primary mt-0.5" />
-                <span>+33 1 23 45 67 89</span>
+                <span>+242 06 117 81 12</span>
               </li>
               <li className="flex items-start gap-2 text-muted-foreground">
                 <MapPin className="w-5 h-5 text-primary mt-0.5" />
-                <span>Paris, France</span>
+                <span>Congo, Brazzaville</span>
               </li>
             </ul>
           </div>
