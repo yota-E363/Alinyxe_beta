@@ -1,4 +1,6 @@
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from '@/components/Navbar';
@@ -129,6 +131,19 @@ const PricingPage = () => {
   ];
 
   return (
+    <>      
+    <Helmet>
+  <title>Tarifs Solutions IA - ALINYXE</title>
+  <meta name="description" content="Découvrez nos tarifs pour les solutions d'intelligence artificielle. Options flexibles pour tous les besoins." />
+  <meta property="og:title" content="Tarifs Solutions IA - ALINYXE" />
+  <meta property="og:description" content="Découvrez nos tarifs pour les solutions d'intelligence artificielle. Options flexibles pour tous les besoins." />
+  <meta property="og:image" content="https://alinyxe.online/images/sub_logo.jpg" />
+  
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tarifs Solutions IA - ALINYXE" />
+  <meta name="twitter:image" content="https://alinyxe.online/images/sub_logo.jpg" />
+</Helmet>
+
     <div className="min-h-screen">
       <Navbar />
       
@@ -270,6 +285,7 @@ const PricingPage = () => {
 
       <Footer />
     </div>
+    </>
   );
 };
 
