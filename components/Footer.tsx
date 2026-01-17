@@ -1,6 +1,6 @@
-import { Link } from 'react-router-dom';
+import Link from 'next/link';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from 'lucide-react';
-import logo from '@/assets/logo.png';
+const logo = '/assets/logo.png';
 
 const Footer = () => {
   return (
@@ -39,10 +39,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4 text-primary">Services</h4>
             <ul className="space-y-2">
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Chatbots IA</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Solutions sur mesure</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Automatisation</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Agents autonomes</Link></li>
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Chatbots IA</Link></li>
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Solutions sur mesure</Link></li>
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Automatisation</Link></li>
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Agents autonomes</Link></li>
             </ul>
           </div>
 
@@ -50,10 +50,10 @@ const Footer = () => {
           <div>
             <h4 className="font-bold text-lg mb-4 text-primary">Entreprise</h4>
             <ul className="space-y-2">
-              <li><Link to="/" className="text-muted-foreground hover:text-primary transition-colors">À propos</Link></li>
-              <li><Link to="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
-              <li><Link to="/tarifs" className="text-muted-foreground hover:text-primary transition-colors">Tarifs</Link></li>
-              <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
+              <li><Link href="/" className="text-muted-foreground hover:text-primary transition-colors">À propos</Link></li>
+              <li><Link href="/services" className="text-muted-foreground hover:text-primary transition-colors">Services</Link></li>
+              <li><Link href="/tarifs" className="text-muted-foreground hover:text-primary transition-colors">Tarifs</Link></li>
+              <li><Link href="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
             </ul>
           </div>
 

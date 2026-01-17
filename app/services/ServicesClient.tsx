@@ -1,17 +1,20 @@
-import { useEffect } from 'react';
-import { Helmet } from 'react-helmet';
+"use client";
 
+import { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { MessageSquare, Bot, Cpu, Network, CheckCircle, ArrowRight } from 'lucide-react';
-import img1 from '@/assets/1.jpg';
-import img2 from '@/assets/2.jpg';
-import img3 from '@/assets/3.jpg';
-import img4 from '@/assets/4.jpg';
+import Link from 'next/link';
+import Image from 'next/image';
 
-const Services = () => {
+const img1 = "/assets/1.jpg";
+const img2 = "/assets/2.jpg";
+const img3 = "/assets/3.jpg";
+const img4 = "/assets/4.jpg";
+
+export default function ServicesClient() {
   useEffect(() => {
     AOS.init({
       duration: 800,
@@ -80,71 +83,9 @@ const Services = () => {
   ];
 
   return (
-    <>
-      <Helmet>
-       <title>Services IA - ALINYXE | Chatbots Intelligents & Automatisation</title>
-        <meta name="description" content="Nos services IA : chatbots intelligents personnalisés, automatisation des processus, agents autonomes, intégration API. Solutions sur mesure pour votre entreprise." />
-        <meta name="description" content="Nos services IA : chatbots intelligents personnalisés, automatisation des processus, agents autonomes, intégration API. Solutions sur mesure pour votre entreprise." />
-        <meta name="keywords" content="chatbot intelligent, automatisation ia, agents autonomes, développement chatbot, solutions ia sur mesure" />
-        
-        <meta property="og:title" content="Services IA - ALINYXE" />
-        <meta property="og:description" content="Chatbots intelligents, automatisation IA et agents autonomes sur mesure." />
-        <meta property="og:url" content="https://alinyxe.online/services" />
-        <meta property="og:image" content="https://i.postimg.cc/PxDzdHpT/Hitube_0OF6eo4h_Mq_2025_12_03_18_15_00.jpg" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Services IA - ALINYXE" />
-        <meta name="twitter:image" content="https://i.postimg.cc/PxDzdHpT/Hitube_0OF6eo4h_Mq_2025_12_03_18_15_00.jpg" />
-        
-        {/* Structured Data - Service */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            "serviceType": "Intelligence Artificielle",
-            "provider": {
-              "@type": "Organization",
-              "name": "ALINYXE",
-              "logo": "https://alinyxe.online/images/logo.png"
-            },
-            "areaServed": "FR",
-            "hasOfferCatalog": {
-              "@type": "OfferCatalog",
-              "name": "Services IA",
-              "itemListElement": [
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Chatbots Intelligents",
-                    "description": "Développement de chatbots IA avancés"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Automatisation IA",
-                    "description": "Automatisation intelligente des processus"
-                  }
-                },
-                {
-                  "@type": "Offer",
-                  "itemOffered": {
-                    "@type": "Service",
-                    "name": "Agents Autonomes",
-                    "description": "Agents IA autonomes sur mesure"
-                  }
-                }
-              ]
-            }
-          })}
-        </script>
-      </Helmet>
     <div className="min-h-screen">
       <Navbar />
       
-      {/* Hero Section */}
       <section className="pt-24 sm:pt-32 pb-12 sm:pb-16 bg-gradient-to-b from-background to-card/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-4xl mx-auto" data-aos="fade-up">
@@ -158,7 +99,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Services Detail */}
       <section className="py-12 sm:py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           {services.map((service, index) => {
@@ -186,21 +126,23 @@ const Services = () => {
                         </li>
                       ))}
                     </ul>
-                    <a href="/contact" className="btn btn-primary gap-2 text-sm sm:text-base">
+                    <Link href="/contact" className="btn btn-primary gap-2 text-sm sm:text-base">
                       En savoir plus
                       <ArrowRight size={18} className="sm:w-5 sm:h-5" />
-                    </a>
+                    </Link>
                   </div>
 
                   <div
                     className={isReverse ? 'md:order-1' : undefined}
                     data-aos={index % 2 === 0 ? 'fade-left' : 'fade-right'}
                   >
-                    <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-primary/20 hover-lift">
-                      <img
+                    <div className="relative rounded-xl sm:rounded-2xl overflow-hidden border border-primary/20 hover-lift aspect-video">
+                      <Image
                         src={service.image}
                         alt={service.title}
-                        className="w-full h-48 sm:h-64 md:h-72 lg:h-80 object-cover"
+                        fill
+                        className="object-cover"
+                        priority={index === 0}
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                     </div>
@@ -212,7 +154,6 @@ const Services = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-12 sm:py-16 md:py-24 bg-card/50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto" data-aos="zoom-in">
@@ -222,17 +163,14 @@ const Services = () => {
             <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 sm:mb-8 px-4">
               Contactez-nous pour discuter de vos besoins et découvrir comment l'IA peut révolutionner votre activité
             </p>
-            <a href="/contact" className="btn btn-primary btn-md sm:btn-lg text-sm sm:text-base">
+            <Link href="/contact" className="btn btn-primary btn-md sm:btn-lg text-sm sm:text-base">
               Demander une consultation gratuite
-            </a>
+            </Link>
           </div>
         </div>
       </section>
 
       <Footer />
     </div>
-    </>
   );
-};
-
-export default Services;
+}

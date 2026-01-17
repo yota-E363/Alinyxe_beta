@@ -1,5 +1,5 @@
 import { Suspense, lazy } from 'react';
-import heroBg from '@/assets/hero-bg.jpg';
+const heroBg = '/assets/hero-bg.jpg';
 
 // Lazy load Spline for better performance
 const Spline = lazy(() => import('@splinetool/react-spline'));
