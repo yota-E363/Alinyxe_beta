@@ -7,6 +7,7 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { ThemeProvider } from "next-themes";
 import "./globals.css";
+import "@/styles/animations.css";
 
 export default function RootLayout({
   children,
