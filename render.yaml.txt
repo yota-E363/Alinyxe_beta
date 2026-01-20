@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: alinyxe-nexus
+    env: node
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    plan: free
+    envVars:
+      - key: NODE_VERSION
+        value: 22.10.5
+      - key: NEXT_TELEMETRY_DISABLED
+        value: 1
