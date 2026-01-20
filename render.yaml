@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: alinyxe-nexus
+    env: docker
+    plan: free
+    dockerFilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /
+    envVars:
+      - key: PORT
+        value: 3000
+      - key: NODE_ENV
+        value: production
+    autoDeploy: true
