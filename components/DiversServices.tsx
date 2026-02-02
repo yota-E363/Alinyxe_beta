@@ -1,4 +1,5 @@
 import { MessageSquare, Bot, Cpu, Network } from 'lucide-react';
+import Image from 'next/image';
 const img1 = '/assets/1.jpg';
 const img2 = '/assets/2.jpg';
 const img3 = '/assets/3.jpg';
@@ -57,10 +58,11 @@ const DiversServices = () => {
               data-aos-delay={index * 100}
             >
               <figure className="relative h-64 overflow-hidden">
-                <img 
+                <Image
                   src={service.image} 
                   alt={service.title}
-                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-500 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
               </figure>
