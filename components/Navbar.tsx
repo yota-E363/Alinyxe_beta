@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
@@ -24,7 +25,14 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center space-x-3 group">
-            <img src={logo} alt="ALINYXE Logo" className="h-12 w-12 transition-transform group-hover:scale-110" />
+            <Image
+              src={logo}
+              alt="ALINYXE Logo"
+              width={48}
+              height={48}
+              className="h-12 w-12 transition-transform group-hover:scale-110"
+              priority
+            />
             <span className="text-2xl  font-bold glow-text">ALI<span className="text-sky-400 " >NYXE</span></span>
           </Link>
 
