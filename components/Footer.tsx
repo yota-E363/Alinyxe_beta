@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Facebook, Instagram } from 'lucide-react';
 const logo = '/assets/logo.png';
 
@@ -10,7 +11,13 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <div className="flex items-center gap-3 mb-4">
-              <img src={logo} alt="ALINYXE" className="h-12 w-12" />
+              <Image
+                src={logo}
+                alt="ALINYXE"
+                width={48}
+                height={48}
+                className="h-12 w-12"
+              />
               <span className="text-2xl font-bold glow-text">ALINYXE</span>
             </div>
             <p className="text-muted-foreground mb-4">

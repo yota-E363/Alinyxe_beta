@@ -1,4 +1,5 @@
 import { Suspense, lazy } from 'react';
+import Link from 'next/link';
 const heroBg = '/assets/hero-bg.jpg';
 
 // Lazy load Spline for better performance
@@ -45,12 +46,12 @@ const HeroSpline = () => {
             Chatbots IA avancés · Solutions sur mesure · Automatisation intelligente · Agents autonomes
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center" data-aos="fade-up" data-aos-delay="400">
-            <a href="/contact" className="btn btn-primary btn-lg">
+            <Link href="/contact" className="btn btn-primary btn-lg">
               Demander une démo
-            </a>
-            <a href="/services" className="btn btn-outline btn-lg">
+            </Link>
+            <Link href="/services" className="btn btn-outline btn-lg">
               Découvrir nos solutions
-            </a>
+            </Link>
           </div>
         </div>
 

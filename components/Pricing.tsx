@@ -1,4 +1,5 @@
 import { Check, X, Zap, Crown, Rocket } from 'lucide-react';
+import Link from 'next/link';
 import { BorderBeam } from '@/components/ui/border-beam';
 
 const Pricing = () => {
@@ -157,7 +158,7 @@ const Pricing = () => {
                       </div>
                     </div>
 
-                    <a
+                    <Link
                       href="/contact"
                       className={`btn w-full mb-4 sm:mb-6 text-sm sm:text-base relative overflow-hidden group/btn ${
                         plan.featured 
@@ -170,7 +171,7 @@ const Pricing = () => {
                       <span className="relative z-10">
                         {plan.price === 'Sur mesure' ? 'Nous contacter' : 'Commencer'}
                       </span>
-                    </a>
+                    </Link>
 
                     {/* Divider */}
                     <div className="h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent mb-4 sm:mb-6" />
@@ -225,9 +226,9 @@ const Pricing = () => {
             </div>
           </div>
           <p className="text-muted-foreground text-sm sm:text-base">
-            <a href="/contact" className="link link-primary">
+            <Link href="/contact" className="link link-primary">
               Besoin d'aide pour choisir ? Contactez-nous
-            </a>
+            </Link>
           </p>
         </div>
       </div>
